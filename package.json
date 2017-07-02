@@ -1,0 +1,30 @@
+{
+  "name": "odd-hill-invoices",
+  "version": "1.0.0",
+  "description": "Application to view invoices",
+  "author": "Therese Sango",
+  "scripts": {
+    "dev": "NODE_ENV=dev webpack-dev-server --progress --config webpack.config.dev.js",
+    "build": "webpack -p --progress --config webpack.config.build.js"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.0.0",
+    "babel-preset-es2015": "^6.24.1",
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.3",
+    "ejs-loader": "^0.3.0",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.28.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.5.0"
+  }
+}
