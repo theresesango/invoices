@@ -44,8 +44,8 @@ table {
 _______________________________________________*/
 
 button {
-    width: 3em;
-    height: 3em;
+  width: 35px;
+  height: 32px;
     border-radius: 3px;
     border: none;
     @include shadow;
@@ -73,3 +73,29 @@ a {
     &:active { color: $money-green; }
 }
 
+/* Navigation
+_______________________________________________*/
+
+nav {
+
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    height: 2em;
+    border-radius: 3px;
+    border: none;
+    @include shadow;
+    background-color: $background-color;
+
+    li {
+      flex: 1;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+}

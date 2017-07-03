@@ -11,6 +11,11 @@
     }
 }
 
+@keyframes disappear {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
 @keyframes away {
   from {
     opacity: 1;
@@ -19,6 +24,30 @@
   to {
     opacity: 0;
     margin-top: 5em;
+  }
+}
+
+@keyframes appearFromRight {
+  from {
+    right: -110%;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes lift {
+  0% {
+    transform: rotateY(0deg);
+  }
+  10% {
+    transform: rotateY(45deg);
+  }
+  90% {
+    transform: rotateY(45deg);
+  }
+  100% {
+    transform: rotateY(0deg);
   }
 }
 

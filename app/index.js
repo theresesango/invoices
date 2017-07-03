@@ -14,6 +14,7 @@ class InvoiceApp {
     this.selectedInvoiceId = 1;
     this.getAllInvoices();
     this.sortSetup();
+
   }
   
   getAllInvoices() {
@@ -79,7 +80,7 @@ class InvoiceApp {
     
     this.detailContainer.innerHTML =
       `<div class="content">
-        <img src="./assets/images/trump.jpg">
+        <img src="./assets/images/trump-${selectedInvoice.img}.jpg">
         <div>
           <h2>${selectedInvoice.accountName}</h2>
           <ul>

@@ -7,7 +7,28 @@
     flex-direction: column;
 
     header {
-        align-self: flex-end;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      -webkit-perspective: 150px;
+      perspective: 150px;
+
+      .hidde-overflow {
+        overflow: hidden;
+        flex: 1;
+        max-width: 90%;
+        padding: 10px;
+        nav {
+          position: relative;
+          z-index: -1;
+          animation: appearFromRight 2s;
+        }
+      }
+
+      button {
+        animation: lift 2s;
+      }
     }
 
     main {
@@ -19,7 +40,6 @@
         flex-direction: column;
     }
 }
-
 
 .content {
     width: 66%;
