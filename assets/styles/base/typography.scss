@@ -1,0 +1,17 @@
+@import "colors";
+
+body {
+
+}
+
+h1, h2, h3 {
+    color: $main-font-darker;
+}
+
+h1 {
+    color: $dark-blue;
+}
+
+h2 {
+    color: $money-green;
+}

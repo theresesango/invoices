@@ -1,0 +1,75 @@
+@import "colors";
+@import "mixin";
+
+
+/* Table
+_______________________________________________*/
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+    margin: 10px 0;
+
+    caption {
+        text-align: inherit;
+        border: inherit;
+        border-bottom: none;
+        padding: 10px 20px;
+    }
+
+    tbody tr {
+        border-left: 3px solid #ccc;
+        &:nth-child(even) { background-color: #f4f4f4}
+        &:hover {
+            box-sizing: border-box;
+            background-color: $yellow-green-opacity;
+            border-left: 3px solid $blue-green;
+            color: $main-font-darker;
+        }
+    }
+
+    td, th {
+        padding: 10px 15px;
+        font-size: .8rem;
+        border: none;
+        word-wrap: break-word;
+        i { margin-left: 10px; }
+    }
+}
+
+/* Button
+_______________________________________________*/
+
+button {
+    width: 3em;
+    height: 3em;
+    border-radius: 3px;
+    border: none;
+    @include shadow;
+    background-color: $background-color;
+    outline: none;
+
+    &:active { background-color: $yellow-green; }
+}
+
+/* Links
+_______________________________________________*/
+
+a {
+    text-decoration: none;
+    color: $main-font-darker;
+    font-weight: 900;
+
+    &:hover,
+    &:active,
+    &:focus {
+        outline: none;
+    }
+
+    &:hover { color: $blue-green; }
+    &:active { color: $money-green; }
+}
+

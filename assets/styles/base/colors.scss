@@ -1,0 +1,14 @@
+$background-color: #fafafa;
+$background-color-darker: darken( $background-color, 10% );
+
+$main-font-color: #044060;
+$main-font-darker: darken( $main-font-color, 10% );
+$main-font-lighter: lighten( $main-font-color, 10% );
+
+$money-green: #6ab891;
+$light-green: #a6dca7;
+$yellow-green: #cadf95;
+$blue-green: #338185;
+$dark-blue: #044060;
+
+$yellow-green-opacity: rgba( $yellow-green, .3 );

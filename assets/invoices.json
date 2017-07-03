@@ -1,0 +1,111 @@
+[
+  {
+    "id" : "1",
+    "type" : "Checking",
+    "accountName" : "1267451 ***** - WOLFE",
+    "status" : "Active",
+    "currency" : "USD",
+    "balance" : 6266.33,
+    "note" : "Donec at hendrerit sem."
+  },
+  {
+    "id" : "2",
+    "type" : "Savings",
+    "accountName" : "8352846 ***** - MAENGUNE",
+    "status" : "Active",
+    "currency" : "USD",
+    "balance" : 10998.10,
+    "note" : "Mauris nunc tortor."
+  },
+  {
+    "id" : "3",
+    "type" : "Savings",
+    "accountName" : "7125781 ***** - KASIER",
+    "status" : "Deactivated",
+    "currency" : "USD",
+    "balance" : 23.86,
+    "note" : "Pellentesque rutrum, turpis sed imperdiet efficitur, sem libero fermentum tellus."
+  }
+,{
+    "id" : "4",
+    "type" : "Checking",
+    "accountName" : "1267451 ***** - WOLFE",
+    "status" : "Active",
+    "currency" : "USD",
+    "balance" : 6266.33,
+    "note" : "Donec at hendrerit sem."
+  },
+  {
+    "id" : "5",
+    "type" : "Savings",
+    "accountName" : "8352846 ***** - MAENGUNE",
+    "status" : "Active",
+    "currency" : "USD",
+    "balance" : 10998.10,
+    "note" : "Mauris nunc tortor."
+  },
+  {
+    "id" : "6",
+    "type" : "Savings",
+    "accountName" : "7125781 ***** - KASIER",
+    "status" : "Deactivated",
+    "currency" : "USD",
+    "balance" : 23.86,
+    "note" : "Pellentesque rutrum, turpis sed imperdiet efficitur, sem libero fermentum tellus."
+  },
+  {
+    "id" : "7",
+    "type" : "Checking",
+    "accountName" : "1267451 ***** - WOLFE",
+    "status" : "Active",
+    "currency" : "USD",
+    "balance" : 6266.33,
+    "note" : "Donec at hendrerit sem."
+  },
+  {
+    "id" : "8",
+    "type" : "Savings",
+    "accountName" : "8352846 ***** - MAENGUNE",
+    "status" : "Active",
+    "currency" : "USD",
+    "balance" : 10998.10,
+    "note" : "Mauris nunc tortor."
+  },
+  {
+    "id" : "9",
+    "type" : "Savings",
+    "accountName" : "7125781 ***** - KASIER",
+    "status" : "Deactivated",
+    "currency" : "USD",
+    "balance" : 23.86,
+    "note" : "Pellentesque rutrum, turpis sed imperdiet efficitur, sem libero fermentum tellus."
+  },
+  {
+    "id" : "10",
+    "type" : "Checking",
+    "accountName" : "1267451 ***** - WOLFE",
+    "status" : "Active",
+    "currency" : "USD",
+    "balance" : 6266.33,
+    "note" : "Donec at hendrerit sem."
+  },
+  {
+    "id" : "11",
+    "type" : "Savings",
+    "accountName" : "8352846 ***** - MAENGUNE",
+    "status" : "Active",
+    "currency" : "USD",
+    "balance" : 10998.10,
+    "note" : "Mauris nunc tortor."
+  },
+  {
+    "id" : "12",
+    "type" : "Savings",
+    "accountName" : "7125781 ***** - KASIER",
+    "status" : "Deactivated",
+    "currency" : "USD",
+    "balance" : 23.86,
+    "note" : "Pellentesque rutrum, turpis sed imperdiet efficitur, sem libero fermentum tellus."
+  }
+]
+

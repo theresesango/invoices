@@ -9,7 +9,7 @@ const dirNode = 'node_modules';
 const dirApp = path.join(__dirname, 'app');
 const dirAssets = path.join(__dirname, 'assets');
 
-const appHtmlTitle = 'Webpack Boilerplate';
+const appHtmlTitle = 'Invoices';
 
 /**
  * Webpack Configuration
@@ -18,7 +18,7 @@ module.exports = {
     entry: {
         vendor: [
             'jquery',
-            'lodash'
+            'lodash',
         ],
         bundle: path.join(dirApp, 'index')
     },

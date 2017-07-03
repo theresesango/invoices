@@ -1,40 +1,21 @@
-@import "./elements.scss";
+@import "base/core";
 
-html {
+html, body {
     box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
 }
 *, *:before, *:after {
     box-sizing: inherit;
+    padding: 0;
+    margin: 0;
 }
 
 body {
-    padding: 0 2em;
-    margin: 0;
-    background-image: url('../images/background.jpg');
+    background-image: url('../images/background-green.jpg');
     font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    color: #666;
-}
-
-main {
-    background-color: #fafafa;
-    height: 100%;
-    width: 50%;
-    padding: 20px 10px 30px 10px;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-h1 {
-    font-size: 1.3rem;
-}
-
-h1 + a {
-    width: 20px;
-    position: relative;
+    color: $main-font-color;
 }
 
