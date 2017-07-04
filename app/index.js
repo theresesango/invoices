@@ -3,20 +3,36 @@ import _ from 'lodash';
 import numeral from 'numeral';
 
 class InvoiceApp {
-  
+  // Initial state
   constructor() {
     this.invoices = [];
     this.table = document.getElementById('invoice-table');
     this.tableHeads = document.getElementsByTagName('th');
     this.tableRows = document.getElementsByClassName('tr-result');
     this.detailContainer = document.getElementById('detail-container');
+    this.menuButton = document.getElementById('menu-button');
+    this.nav = document.getElementById('nav');
     this.currentOrderOfSortField = 'desc';
+    this.isMenuCollaps = false;
     this.selectedInvoiceId = 1;
     this.getAllInvoices();
     this.sortSetup();
-
+    
+    // Handels menu animations
+    this.menuButton.addEventListener('click', (e) => {
+      if (!this.isMenuCollaps) {
+        e.currentTarget.className = 'show';
+        this.nav.className = 'show';
+        this.isMenuCollaps = true;
+      } else {
+        e.currentTarget.className = 'hide';
+        this.nav.className = '';
+        this.isMenuCollaps = false;
+      }
+      return false;
+    })
   }
-  
+  // Gets all invoices from invoices.json and populate the main table
   getAllInvoices() {
     $.getJSON("./assets/invoices.json", (data) => {
       data.forEach((invoice) => {
@@ -26,6 +42,7 @@ class InvoiceApp {
     });
   }
   
+  // Populates main table with invoice information
   populateTable(arr) {
     this.table.innerHTML = '';
     arr.forEach((invoice) => {
@@ -41,15 +58,18 @@ class InvoiceApp {
       `;
       this.table.appendChild(tableRow);
     });
-  
+    
+    // Gets the selected invoices id to render detail view
     for (const tableRow of this.tableRows) {
       tableRow.addEventListener('click', (e) => {
         this.selectedInvoiceId = e.currentTarget.dataset.id;
         this.renderDetailView(this.selectedInvoiceId);
         
+        // Closing details view
         this.closeButton = document.getElementById('close-button');
         this.closeButton.addEventListener('click', () => {
-          this.detailContainer.style.animation = 'away 1s';
+          this.detailContainer.style.animation = 'disappear 1s';
+          // awaits the animation before remove
           setTimeout(() => {
             this.detailContainer.innerHTML = '';
             this.detailContainer.style.animation = '';
@@ -58,22 +78,8 @@ class InvoiceApp {
       })
     }
   }
-  
-  sortSetup() {
-    for (const tableHead of this.tableHeads) {
-      tableHead.addEventListener('click', (e) => {
-        this.currentSortField = _.camelCase(e.target.innerText);
-        this.currentOrderOfSortField = (this.currentOrderOfSortField === 'desc') ? 'asc' : 'desc';
-        this.sortTable(this.currentSortField, this.currentOrderOfSortField);
-      })
-    }
-  }
-  
-  sortTable(sortBy, order) {
-    const sortedInvoices = _.orderBy(this.invoices, [o => o[sortBy]], [order]);
-    this.populateTable(sortedInvoices);
-  }
-  
+    
+  // Detail view template
   renderDetailView(selectedInvoiceId) {
     this.detailContainer.innerHTML = '';
     let selectedInvoice = _.find(this.invoices, ['id', selectedInvoiceId ]);
@@ -94,6 +100,24 @@ class InvoiceApp {
         </div>
       </div>
       <div><a id="close-button"><i class="fa fa-times" aria-hidden="true"></i></a></div>`;
+  }
+  
+  // Adds eventlisteners to table heads for sorting
+  sortSetup() {
+    for (const tableHead of this.tableHeads) {
+      tableHead.addEventListener('click', (e) => {
+        this.currentSortField = _.camelCase(e.target.innerText);
+        this.currentOrderOfSortField = (this.currentOrderOfSortField === 'desc') ? 'asc' : 'desc';
+        this.sortTable(this.currentSortField, this.currentOrderOfSortField);
+      })
+    }
+  }
+  
+  // Sorts the table depending on which button was pressed
+  // and if it should be asc or desc
+  sortTable(sortBy, order) {
+    const sortedInvoices = _.orderBy(this.invoices, [o => o[sortBy]], [order]);
+    this.populateTable(sortedInvoices);
   }
 }
 

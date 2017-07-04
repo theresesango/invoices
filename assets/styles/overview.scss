@@ -2,15 +2,15 @@
 @import "base/mixin";
 
 .overview {
-    background-color: $background-color;
-    @include shadow;
-    overflow: auto;
+  background-color: $background-color;
+  @include shadow;
+  overflow: auto;
 
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 
